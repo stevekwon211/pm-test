@@ -1,6 +1,11 @@
 import React from "react";
 
-const ProgressIndicator = ({ step, totalSteps }) => {
+interface ProgressIndicatorProps {
+    step: number;
+    totalSteps: number;
+}
+
+const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({ step, totalSteps }) => {
     const progress = (step / totalSteps) * 100;
     return (
         <div className="progress-indicator">
