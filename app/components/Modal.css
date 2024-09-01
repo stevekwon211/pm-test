@@ -1,0 +1,41 @@
+.modal {
+    /* ... existing styles ... */
+    border-radius: 20px;
+    min-width: 632px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #434343, #000000); /* Apply gradient on background color from top to bottom */
+    color: white; /* Text color is white */
+}
+
+.header {
+    align-items: center;
+}
+
+.main-heading {
+    color: white; /* Ensure PM 레벨 테스트하기 text is white */
+    text-align: center; /* Center align the .main-heading */
+}
+
+.subtext {
+    color: white;
+    font-size: medium;
+    text-align: left; /* Ensure .subtext starts from the left */
+    margin: 20px; /* Add margin of 20px */
+}
+
+.cta-button {
+    background: linear-gradient(180deg, rgba(116, 45, 221, 0.7) 100%, rgba(116, 45, 221, 0.7) 0%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 200ms;
+    cursor: pointer;
+    width: auto; /* Ensure button size hugs the contents */
+}
