@@ -1,6 +1,10 @@
 import React from "react";
 
-const ScenarioDescription = ({ description }) => {
+interface ScenarioDescriptionProps {
+    description: string;
+}
+
+const ScenarioDescription: React.FC<ScenarioDescriptionProps> = ({ description }) => {
     return <p className="scenario-description">{description}</p>;
 };
 
