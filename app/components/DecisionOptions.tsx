@@ -1,10 +1,25 @@
 import React from "react";
 
-const DecisionOptions = ({ options, onOptionClick }) => {
+interface Option {
+    text: string;
+    kpi: {
+        revenue: number;
+        cost: number;
+        retention: number;
+        nps: number;
+    };
+}
+
+interface DecisionOptionsProps {
+    options: Option[];
+    onOptionClick: (optionKpi: Option["kpi"]) => void;
+}
+
+const DecisionOptions: React.FC<DecisionOptionsProps> = ({ options, onOptionClick }) => {
     return (
         <div className="decision-options">
             {options.map((option, index) => (
-                <button key={index} className="option-button" onClick={() => onOptionClick(option.kpi)}>
+                <button key={index} onClick={() => onOptionClick(option.kpi)}>
                     {option.text}
                 </button>
             ))}
